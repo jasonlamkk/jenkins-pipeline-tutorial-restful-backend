@@ -22,6 +22,4 @@ do
   docker cp "${currentDirectory}/code/${file}" "${containerName}:/code/${file}"
 done
 
-docker exec ${containerName} sh /code/start-server-inside-docker.sh
-
 # docker stop ${containerName} # do not stop container but keep the containerName in startedContainers.txt

@@ -1,0 +1,3 @@
+##dockerized CI series - applying jest unit test and reduce the need of rebuild image
+
+ref to main tutorial at...

@@ -1,0 +1,6 @@
+.DS_Store
+
+/code/node_modules
+/code/package-lock.json
+
+/code/pid.out

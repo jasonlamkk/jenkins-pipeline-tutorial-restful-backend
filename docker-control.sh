@@ -10,16 +10,18 @@ if [ -z DOCKER_CONTAINER_NAME_JSON_API_SERVER ]; then
   containerName=${DOCKER_CONTAINER_NAME_JSON_API_SERVER}
 fi
 
+echo ${containerName} >> startedContainers.txt
+
 docker run --name=${containerName} --rm -d ${imageName} 
 
 #copy files 
-currentDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+currentDirectory=$(pwd)
 
 for file in $(< ${currentDirectory}/copyfiles.txt)
 do
   docker cp "${currentDirectory}/code/${file}" "${containerName}:/code/${file}"
 done
 
-docker exec ${containerName} sh /code/run-in-docker.sh
+docker exec ${containerName} sh /code/start-server-inside-docker.sh
 
-docker stop ${containerName}
+# docker stop ${containerName} # do not stop container but keep the containerName in startedContainers.txt

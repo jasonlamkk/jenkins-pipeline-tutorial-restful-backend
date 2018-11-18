@@ -4,3 +4,5 @@
 /code/package-lock.json
 
 /code/pid.out
+
+startedContainers.txt

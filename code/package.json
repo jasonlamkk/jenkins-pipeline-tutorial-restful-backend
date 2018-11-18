@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js 2> pid.out 1> /dev/null",
+    "start": "node server.js",
     "test": "node node_modules/jest/bin/jest.js",
     "stop": "curl http://localhost:3000/close-without-error?"
   },

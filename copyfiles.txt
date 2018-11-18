@@ -2,4 +2,6 @@ server.js
 package.json
 data
 tests
-run-in-docker.sh
+run-test-inside-docker.sh
+start-server-inside-docker.sh
+stop-server-inside-docker.sh

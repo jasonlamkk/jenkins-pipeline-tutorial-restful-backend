@@ -1,5 +1,16 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "post on 1542569358269",
+      "content": "post content ... 1542569358269",
+      "id": 1
+    },
+    {
+      "title": "post on 1542569389600",
+      "content": "post content ... 1542569389600",
+      "id": 2
+    }
+  ],
   "comments": [
     {
       "id": 1,
